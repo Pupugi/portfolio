@@ -61,7 +61,7 @@ const projectAray = [
     name: "포트폴리오",
     id: "portfolio",
     url: imgOne,
-    adress: "https://Pupugi.github.io/Twelve-Janggi",
+    adress: "https://Pupugi.github.io/portfolio/",
     summary: `사용기술 : react, framer-motion
 
 핵심기능 : framer-motion을 이용한 animation효과
