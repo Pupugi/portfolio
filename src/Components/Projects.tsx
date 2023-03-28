@@ -61,7 +61,8 @@ const projectAray = [
     name: "포트폴리오",
     id: "portfolio",
     url: imgOne,
-    adress: "https://Pupugi.github.io/portfolio/",
+    adress: "https://pupugi.github.io/portfolio",
+    github: "https://github.com/Pupugi/portfolio",
     summary: `사용기술 : react, framer-motion
 
 핵심기능 : framer-motion을 이용한 animation효과
@@ -77,6 +78,7 @@ const projectAray = [
     id: "twelveJanggi",
     url: imgTwo,
     adress: "https://Pupugi.github.io/Twelve-Janggi",
+    github: "https://github.com/Pupugi/Twelve-Janggi",
     summary: `사용기술 : react, typescript, beautiful-dnd
 
 핵심기능 : 말들의 이동과 잡기, 승리 등 규칙 구현
@@ -91,6 +93,7 @@ const projectAray = [
     id: "reactTodolist",
     url: imgThree,
     adress: "https://Pupugi.github.io/react-todolist",
+    github: "https://github.com/Pupugi/react-todolist",
     summary: `사용기술 : react, typescript, beautiful-dnd
 
 핵심기능 : beautiful-dnd를 이용한 드래그앤드롭
@@ -104,6 +107,7 @@ const projectAray = [
     id: "codeDiary",
     url: imgFour,
     adress: "https://code-diary.fly.dev",
+    github: "https://github.com/Pupugi/codediary",
     summary: `사용기술 : node.js, mongoDB, express, pug, fly.io
 
 핵심기능 : javascript를 이용한 CRUD 구현
@@ -129,12 +133,15 @@ const Detail = styled(motion.div)`
   justify-content: space-between;
   align-items: center;
   a {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     @media (max-width: 767px) {
-      padding-left: 10px;
       font-size: 10px;
-      padding-bottom: 10px;
+      margin-bottom: 10px;
     }
+  }
+  a:first-child {
+    padding: 0px;
+    margin-bottom: 5px;
   }
 `;
 
@@ -167,6 +174,11 @@ const Summary = styled.pre`
     padding-left: 10px;
     font-size: 10px;
   }
+`;
+
+const Links = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const Projects = () => {
@@ -209,7 +221,10 @@ const Projects = () => {
                 <Cover url={foundObj.url} />
                 <Title>{foundObj.name}</Title>
                 <Summary>{foundObj.summary}</Summary>
-                <a href={foundObj.adress}>{foundObj.adress}</a>
+                <Links>
+                  <a href={foundObj.adress}>{foundObj.adress}</a>
+                  <a href={foundObj.github}>{foundObj.github}</a>
+                </Links>
               </Detail>
             </>
           )}
