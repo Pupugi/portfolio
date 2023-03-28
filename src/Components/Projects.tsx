@@ -104,7 +104,7 @@ const projectAray = [
     id: "codeDiary",
     url: imgFour,
     adress: "https://code-diary.fly.dev",
-    summary: `사용기술 : node.js, mongoDB, express, pug, heroku
+    summary: `사용기술 : node.js, mongoDB, express, pug, fly.io
 
 핵심기능 : javascript를 이용한 CRUD 구현
 
